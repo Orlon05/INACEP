@@ -1,0 +1,93 @@
+header {
+    background-color: #0b0b5f;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 40px 0;
+    gap: 30px;
+    
+    .hero-banner {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-shrink: 0;
+        
+        .logo-container {
+            img {
+                height: 100px;
+                width: auto;
+                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            }
+        }
+        
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 65%;
+    
+            .company-name {
+                font-size: 55px;
+                font-weight: bold;
+                color: white;
+                margin: 0;
+                text-shadow: 3px 3px 5px rgb(180, 157, 91);
+                letter-spacing: 6px;
+                text-align: center;
+            }
+            
+            .company-tagline {
+                font-size: 11px;
+                color: white;
+                margin: 0;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                text-align: center;
+            }
+        }
+    }
+    
+    .nav-tabs {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 0;
+
+        .nav-item {
+            .nav-link {
+                color: white;
+                // &:hover {
+                //     background-color: #f4e4c1;
+                //     color: #0b0b5f;
+                // }
+            }
+            .active{
+                color: black;
+            }
+        }
+    }
+    
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        padding: 20px;
+        
+        .hero-banner {
+            .logo-container img {
+                height: 80px;
+            }
+            
+            .text-container {
+                .company-name {
+                    font-size: 36px;
+                    letter-spacing: 4px;
+                }
+                
+                .company-tagline {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
